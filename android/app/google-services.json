@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "548126937399",
+    "project_id": "bidart-eabe0",
+    "storage_bucket": "bidart-eabe0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548126937399:android:2af8f9239605a9b67dcab2",
+        "android_client_info": {
+          "package_name": "com.example.bidding_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6UiDfMfVlFQSn1u0RJs6hleM7gW7p63Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
