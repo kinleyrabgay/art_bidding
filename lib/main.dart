@@ -1,8 +1,12 @@
+import 'package:bidding_app/common/app/app_repository.dart';
 import 'package:bidding_app/firebase_options.dart';
+import 'package:bidding_app/utils/constants/colors.dart';
+import 'package:bidding_app/utils/theme/theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 Future<void> main() async {
@@ -16,11 +20,6 @@ Future<void> main() async {
   // Add native splash
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-  // Initialize firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  ).then((value) => null);
-
   // Status bar color
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
@@ -29,6 +28,11 @@ Future<void> main() async {
       statusBarIconBrightness: Brightness.dark,
     ),
   );
+
+  // Initialize firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  ).then((FirebaseApp value) => Get.put(AppRepository()));
 
   // Start the application
   runApp(const MyApp());
@@ -40,13 +44,22 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return GetMaterialApp(
+      title: 'Art Bid',
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      darkTheme: FAAppTheme.darkTheme,
+      theme: FAAppTheme.lightTheme,
+
+      // Show loader or circular progress indicator
+      home: const Scaffold(
+        backgroundColor: FAColors.primary,
+        body: Center(
+          child: CircularProgressIndicator(
+            color: Colors.white,
+          ),
+        ),
       ),
-      home: const Placeholder(),
     );
   }
 }

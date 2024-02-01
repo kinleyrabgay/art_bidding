@@ -32,7 +32,7 @@ class FASizes {
   static const double imageThumbSize = 80.0;
 
   // Default spacing b/w section
-  static const double defaultSpace = 24.0;
+  static const double defaultSpace = 16.0;
   static const double spaceBtwItems = 16.0;
   static const double spaceBtwSections = 32.0;
 

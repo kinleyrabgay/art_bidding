@@ -4,6 +4,12 @@ class FAImages {
   static const String darkAppLogo = "assets/logos/logo.png";
   static const String lightAppLogo = "assets/logos/logo.png";
 
+  // ------------- Menu ----------------------------------------------
+  static const String home = 'assets/menu/home.png';
+  static const String sell = 'assets/menu/home.png';
+  static const String aution = 'assets/menu/home.png';
+  static const String profile = 'assets/menu/home.png';
+
   // Social
   static const String goggle = "assets/logos/google.png";
   static const String facebook = "assets/logos/facebook.png";

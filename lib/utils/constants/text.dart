@@ -5,9 +5,10 @@ class FATexts {
   // Global
 
   // Onboarding title text
-  static const String onBoardingTitle1 = "Choose your product";
-  static const String onBoardingTitle2 = "Select Payment Method";
-  static const String onBoardingTitle3 = "Deliver at your door steps";
+  static const String onBoardingTitle1 = "Auction houses from around the world";
+  static const String onBoardingTitle2 = "Buy art from premier gallery Bidart";
+  static const String onBoardingTitle3 =
+      "Upload and sell your best work exploration";
 
   // Onboarding sub-title text
   static const String onBoardingSubTitle1 =

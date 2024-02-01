@@ -33,21 +33,24 @@ dependencies:
   iconsax: ^0.0.8
   lottie: ^3.0.0
   logger: ^2.0.2+1
+  firebase_auth: ^4.17.0
+  smooth_page_indicator: ^1.1.0
 
 ## Dev Dependencies
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 ## Rx
 flutter:
   uses-material-design: true
   assets:
     # Images
-    - assets/images/logo
-    - assets/images/onboarding
+    - assets/images/logo/
+    - assets/images/menu/
+    - assets/images/onboarding/
 
     # Icon
     - assets/icons/
