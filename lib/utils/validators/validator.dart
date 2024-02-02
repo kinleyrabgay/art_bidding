@@ -41,6 +41,30 @@ class FAValidator {
     return null;
   }
 
+  static String? validatePasswordConfirm(String? value, String password) {
+    if (value == null || value.isEmpty) {
+      return 'Password if required';
+    }
+
+    if (value.length < 6) {
+      return 'Password must be at least 6 characters long';
+    }
+
+    if (!value.contains(RegExp(r'[0-9]'))) {
+      return 'Password must contain at least one number';
+    }
+
+    if (!value.contains(RegExp(r'[!@#$%^&*()":{}|<>]'))) {
+      return 'Password must contain at least one special character';
+    }
+
+    if (value != password) {
+      return "Enter passwords don't match";
+    }
+
+    return null;
+  }
+
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
       return 'Phone number is required';

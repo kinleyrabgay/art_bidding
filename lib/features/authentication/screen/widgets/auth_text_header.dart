@@ -27,7 +27,7 @@ class AuthTextHeader extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .bodySmall!
-              .apply(color: FAColors.darkerGrey),
+              .apply(color: FAColors.darkGrey),
         ),
       ],
     );

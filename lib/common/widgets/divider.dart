@@ -1,26 +1,26 @@
 import 'package:bidding_app/utils/constants/colors.dart';
+import 'package:bidding_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
-class TFormDivider extends StatelessWidget {
-  const TFormDivider({
+class FAFormDivider extends StatelessWidget {
+  const FAFormDivider({
     super.key,
-    required this.dark,
     required this.divierText,
   });
 
-  final bool dark;
   final String divierText;
 
   @override
   Widget build(BuildContext context) {
+    final isDark = FAHelperFunctions.isDarkMode(context);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
           child: Divider(
-            color: dark ? FAColors.darkGrey : FAColors.grey,
+            color: isDark ? FAColors.darkGrey : FAColors.grey,
             thickness: 0.5,
-            indent: 60,
+            // indent: 60,
             endIndent: 5,
           ),
         ),
@@ -30,10 +30,10 @@ class TFormDivider extends StatelessWidget {
         ),
         Flexible(
           child: Divider(
-            color: dark ? FAColors.darkGrey : FAColors.grey,
+            color: isDark ? FAColors.darkGrey : FAColors.grey,
             thickness: 0.5,
             indent: 5,
-            endIndent: 60,
+            // endIndent: 60,
           ),
         ),
       ],

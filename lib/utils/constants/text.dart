@@ -23,6 +23,9 @@ class FATexts {
   static const String authEmailSubTitle =
       "Sign in with your email. If you don't have and BidArt account yet, we'll get on set up for you";
 
+  static const String createPasswordTitle = "Create Password";
+  static const String createPasswordSubTitle = "Must be 8 character or long";
+
   // Home
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Kinley Rabgay";

@@ -1,4 +1,5 @@
 import 'package:bidding_app/common/app/app_repository.dart';
+import 'package:bidding_app/common/bindings/general_bindings.dart';
 import 'package:bidding_app/firebase_options.dart';
 import 'package:bidding_app/utils/constants/colors.dart';
 import 'package:bidding_app/utils/theme/theme.dart';
@@ -51,6 +52,9 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       darkTheme: FAAppTheme.darkTheme,
       theme: FAAppTheme.lightTheme,
+
+      // --- Any other binding required
+      initialBinding: GeneralBindings(),
 
       // Show loader or circular progress indicator
       home: const Scaffold(

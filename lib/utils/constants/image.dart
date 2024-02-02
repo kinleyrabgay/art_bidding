@@ -10,9 +10,9 @@ class FAImages {
   static const String aution = 'assets/menu/home.png';
   static const String profile = 'assets/menu/home.png';
 
-  // Social
-  static const String goggle = "assets/logos/google.png";
-  static const String facebook = "assets/logos/facebook.png";
+  // Social Button
+  static const String goggle = "assets/images/social/google.png";
+  static const String facebook = "assets/images/social/facebook.png";
 
   // Onboarding
   static const String onboardingImage1 =

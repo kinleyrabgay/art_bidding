@@ -1,4 +1,4 @@
-import 'package:bidding_app/features/authentication/controller/login_controller.dart';
+import 'package:bidding_app/features/authentication/controller/authentication_controller.dart';
 import 'package:bidding_app/utils/constants/colors.dart';
 import 'package:bidding_app/utils/constants/sizes.dart';
 import 'package:bidding_app/utils/validators/validator.dart';
@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
-class FAInputField extends StatelessWidget {
-  const FAInputField({
+class FAAuthenticationForm extends StatelessWidget {
+  const FAAuthenticationForm({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(LoginController());
+    final controller = Get.put(AuthenticationController());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -33,24 +33,18 @@ class FAInputField extends StatelessWidget {
             hintStyle: Theme.of(context).textTheme.labelLarge,
           ),
         ),
-        const SizedBox(height: FASizes.spaceBtwItems * 1.5),
+        const SizedBox(height: FASizes.spaceBtwSections),
         // Button
         SizedBox(
           width: double.infinity,
           child: ElevatedButton(
-            onPressed: () => controller.signIn(),
-            child: Row(
+            onPressed: () => controller.redirectAuthScreen(),
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'Next',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineSmall!
-                      .apply(color: FAColors.white),
-                ),
-                const SizedBox(width: FASizes.spaceBtwItems),
-                const Icon(Iconsax.arrow_right_1)
+                Text('Next', style: TextStyle(color: FAColors.white)),
+                SizedBox(width: FASizes.spaceBtwItems),
+                Icon(Iconsax.arrow_right_1)
               ],
             ),
           ),

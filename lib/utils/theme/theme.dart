@@ -1,3 +1,4 @@
+import 'package:bidding_app/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:bidding_app/utils/theme/custom_theme/appbar_theme.dart';
 import 'package:bidding_app/utils/theme/custom_theme/bottom_sheet_theme.dart';
@@ -19,7 +20,7 @@ class FAAppTheme {
     primaryColor: Colors.blue,
     textTheme: FATextTheme.lightTextTheme,
     chipTheme: FAChipTheme.lightChipTheme,
-    scaffoldBackgroundColor: Colors.white,
+    scaffoldBackgroundColor: FAColors.white,
     appBarTheme: FAAppBarTheme.lightAppBarTheme,
     checkboxTheme: FACheckboxTheme.lightCheckboxTheme,
     bottomSheetTheme: FABottomSheetTheme.lightBottomSheetTheme,
@@ -35,7 +36,7 @@ class FAAppTheme {
     primaryColor: Colors.blue,
     textTheme: FATextTheme.darkTextTheme,
     chipTheme: FAChipTheme.darkChipTheme,
-    scaffoldBackgroundColor: Colors.black,
+    scaffoldBackgroundColor: FAColors.dark,
     appBarTheme: FAAppBarTheme.darkAppBarTheme,
     bottomSheetTheme: FABottomSheetTheme.darkBottomSheetTheme,
     checkboxTheme: FACheckboxTheme.darkCheckboxTheme,
