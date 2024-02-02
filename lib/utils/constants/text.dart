@@ -18,6 +18,11 @@ class FATexts {
   static const String onBoardingSubTitle3 =
       "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!";
 
+  // --------------------------------- AUTHENTICATION ------------------------------
+  static const String authEmailTitle = "Enter your email address";
+  static const String authEmailSubTitle =
+      "Sign in with your email. If you don't have and BidArt account yet, we'll get on set up for you";
+
   // Home
   static const String homeAppbarTitle = "Good day for shopping";
   static const String homeAppbarSubTitle = "Kinley Rabgay";

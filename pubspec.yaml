@@ -35,6 +35,7 @@ dependencies:
   logger: ^2.0.2+1
   firebase_auth: ^4.17.0
   smooth_page_indicator: ^1.1.0
+  connectivity_plus: ^5.0.2
 
 ## Dev Dependencies
 dev_dependencies:

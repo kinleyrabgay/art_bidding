@@ -1,4 +1,4 @@
-import 'package:bidding_app/features/authentication/screen/registration/register_screen.dart';
+import 'package:bidding_app/features/authentication/screen/login/login_screen.dart';
 import 'package:bidding_app/features/onboarding/screen/onboarding_screen.dart';
 import 'package:bidding_app/navigation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -48,7 +48,7 @@ class AppRepository extends GetxController {
       // Write to storage if null entry
       deviceStorage.writeIfNull('isFirstTime', true);
       deviceStorage.read('isFirstTime') != true
-          ? Get.offAll(() => const RegisterScreen())
+          ? Get.offAll(() => const LoginScreen())
           : Get.offAll(() => const OnboardingScreen());
     }
   }
